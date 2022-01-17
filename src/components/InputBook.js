@@ -7,9 +7,11 @@ const InputBook = () => (
       <h2>ADD NEW BOOK</h2>
     </div>
     <div>
-      <input type="text" placeholder="Book Title" />
-      <Select />
-      <Button type="submit" text="ADD BOOK" />
+      <form style={{ display: 'flex', alignItems: 'center' }}>
+        <input type="text" placeholder="Book Title" />
+        <Select />
+        <Button type="submit" text="ADD BOOK" />
+      </form>
     </div>
   </section>
 );

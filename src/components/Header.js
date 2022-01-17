@@ -15,8 +15,15 @@ const Header = () => {
     },
   ];
   return (
-    <header>
-      <div>
+    <header
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '10px 50px',
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center' }}>
         <div>
           <h2>Bookstore CMS</h2>
         </div>
