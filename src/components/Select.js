@@ -1,4 +1,4 @@
-const Category = () => {
+const Select = () => {
   const types = [
     {
       id: 1,
@@ -32,4 +32,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Select;
