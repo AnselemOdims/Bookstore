@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+
+import Books from './pages/Books';
+import Categories from './pages/Categories';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Books />
+    <Categories />
   </React.StrictMode>,
   document.getElementById('root'),
 );
