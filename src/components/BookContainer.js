@@ -1,5 +1,5 @@
 const BookContainer = () => (
-  <div />
+  <div>No books added yet</div>
 );
 
 export default BookContainer;
