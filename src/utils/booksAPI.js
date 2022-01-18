@@ -6,7 +6,7 @@ import FetchWrapper from './fetchWrapper';
 class BooksAPI {
   static #BASE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 
-  static #APP_ID = '1';
+  static #APP_ID = 'mDm4dEiEhEvX6B1jDkZT';
 
   /**
    * @method getAllBooks
