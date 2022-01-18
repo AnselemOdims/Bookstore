@@ -14,11 +14,13 @@
 :root {
   --primary-color-1: #0290ff;
   --primary-color-2: #084a7c;
+  --accent-color: #4386bf;
   --secondary-color-1: #858792;
   --secondary-color-2: #3b3b41;
   --neutral-color-1: #e8e8e8;
   --neutral-color-2: #d8d8d8;
   --white: #fff;
+  --black: #121212;
   --font-1: 'Montserrat', sans-serif;
   --font-2: 'Roboto Slab', sans-serif;
   --shadow-1: rgba(0, 0, 0, 0.25) 0 25px 50px -12px;
