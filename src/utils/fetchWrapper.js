@@ -30,7 +30,7 @@ export default class FetchWrapper {
       },
       body: JSON.stringify(data),
     });
-    return response.ok;
+    return response;
   }
 
   /**
@@ -41,11 +41,11 @@ export default class FetchWrapper {
    */
   async delete(endpoint) {
     const response = await fetch(this.baseURL + endpoint, {
-      method: 'POST',
+      method: 'DELETE',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
       },
     });
-    return response.ok;
+    return response;
   }
 }
