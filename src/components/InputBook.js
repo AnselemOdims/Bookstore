@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { useState, useRef } from 'react';
@@ -19,6 +20,7 @@ const InputBook = () => {
       title,
       author,
     };
+    console.log(newBook)
     title !== '' && author !== '' && dispatch(addBook(newBook));
     titleInput.current.focus();
     setTitle('');
@@ -30,13 +32,11 @@ const InputBook = () => {
       <div>
         <h2>ADD NEW BOOK</h2>
       </div>
-      <div>
-        <form style={{ display: 'flex', alignItems: 'center' }}>
-          <input type="text" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-          <Select />
-          <Button type="submit" text="ADD BOOK" handleClick={submitBook} />
-        </form>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <input type="text" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <Select />
+        <Button type="submit" text="ADD BOOK" handleClick={submitBook} />
       </div>
     </section>
   );

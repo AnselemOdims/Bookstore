@@ -23,7 +23,10 @@ const Book = ({
   };
 
   return (
-    <div>
+    <div style={{
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#fff',
+    }}
+    >
       <div>
         <p>{category}</p>
         <h2>{title}</h2>
