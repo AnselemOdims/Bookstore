@@ -1,4 +1,6 @@
-const Select = () => {
+import PropTypes from 'prop-types';
+
+const Select = ({ selectValue, handleChange }) => {
   const types = [
     {
       id: 1,
@@ -23,13 +25,18 @@ const Select = () => {
   ];
   return (
     <div>
-      <select>
+      <select value={selectValue} onChange={handleChange}>
         {types.map((type) => (
           <option key={type.id} value={type.val}>{type.val}</option>
         ))}
       </select>
     </div>
   );
+};
+
+Select.propTypes = {
+  selectValue: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default Select;
