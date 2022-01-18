@@ -11,9 +11,9 @@ const rotate = keyframes`
 `;
 const Loader = styled.span`
 animation: ${rotate} linear infinite 1s;
-height: 50px;
-width: 50px;
-border: 5px solid var(--primary-color-1);
+height: 70px;
+width: 70px;
+border: 8px solid var(--primary-color-1);
 border-right-color: transparent;
 border-radius: 50%;
 position: absolute;
