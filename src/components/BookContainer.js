@@ -7,7 +7,7 @@ const BookList = () => {
   return (
     <div>
       {books.length === 0 ? <h2>No Books Added Yet</h2> : books.map((book) => (
-        <Book key={book.id} category="Action" title={book.title} author={book.author} chapter="10" id={book.id} />
+        <Book key={book.id} category={book.category} title={book.title} author={book.author} chapter="10" id={book.id} />
       ))}
     </div>
   );
