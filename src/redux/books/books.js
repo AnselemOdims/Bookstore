@@ -10,4 +10,14 @@ const BOOK_REMOVED = 'bookStore/books/BOOK_REMOVED';
 export const addBook = payload => ({
   type: BOOK_ADDED,
   payload,
-})
+});
+
+/**
+ * @function removeBook - the action creator for removing a book
+ * @param {Object} payload - the payload for adding a new Book
+ * @returns {Object} - the action object
+ */
+export const removeBook = payload => ({
+  type: BOOK_REMOVED,
+  payload,
+});
