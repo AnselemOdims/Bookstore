@@ -8,25 +8,27 @@ const SelectContainer = styled.div`
       border: none;
       padding: 0 1em 0 0;
       margin: 0;
-      width: 100%;
+      width: 20.813rem;
+      height: 2.813rem;
       font-family: inherit;
       outline: none;
       color: #c4c4c4;
       cursor: pointer;
+      padding: 0 0 0 20px;
     } 
 
     & {
-        width: 17.813rem;
+        width: 15.813rem;
         border: solid 1px var(--neutral-color-1);
         border-radius: 4px;
         background-color: var(--white);
         height: 2.813rem;
         cursor: pointer;
-        padding: 0.375rem 0.938rem 0.563rem 1rem;
         line-height: 1.1;
         display: flex;
         align-items: center;
         margin: 20px 0;
+        padding-right: 20px;  
       }
 
       &::after {

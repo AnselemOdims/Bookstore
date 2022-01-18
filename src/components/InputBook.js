@@ -25,7 +25,7 @@ const Container = styled.section`
     justify-content: space-between;
 
     > input {
-      width: 18rem;
+      width: 20rem;
       height: 2.813rem;
       border: solid 1px #e8e8e8;
       padding: 0 20px; 
