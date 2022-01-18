@@ -55,7 +55,7 @@ const Book = ({
           Chapter
           {chapter}
         </span>
-        <Button type="button" text="UPDATE PROGRESS" handleClick={handleClick} />
+        <Button text="UPDATE PROGRESS" handleClick={handleClick} />
       </div>
     </div>
   );

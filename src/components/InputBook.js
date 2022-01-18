@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { useState, useRef } from 'react';
@@ -20,7 +19,8 @@ const InputBook = () => {
       title,
       author,
     };
-    title !== '' && author !== '' && dispatch(addBook(newBook));
+    const res = () => title !== '' && author !== '' && dispatch(addBook(newBook));
+    res();
     titleInput.current.focus();
     setTitle('');
     setAuthor('');
@@ -35,7 +35,7 @@ const InputBook = () => {
         <input type="text" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <Select />
-        <Button type="submit" text="ADD BOOK" handleClick={submitBook} />
+        <Button text="ADD BOOK" handleClick={submitBook} />
       </div>
     </section>
   );
