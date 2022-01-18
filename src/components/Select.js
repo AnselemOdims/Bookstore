@@ -1,5 +1,46 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
+const SelectContainer = styled.div`
+    > select {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      padding: 0 1em 0 0;
+      margin: 0;
+      width: 100%;
+      font-family: inherit;
+      outline: none;
+      color: #c4c4c4;
+      cursor: pointer;
+    } 
+
+    & {
+        width: 17.813rem;
+        border: solid 1px var(--neutral-color-1);
+        border-radius: 4px;
+        background-color: var(--white);
+        height: 2.813rem;
+        cursor: pointer;
+        padding: 0.375rem 0.938rem 0.563rem 1rem;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      &::after {
+        content: "";
+        width: 0.8rem;
+        height: 0.5rem;
+        background-color: #c7c7c7;;
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      }
+
+      &:focus-within {
+        border: solid 1px var(--primary-color-1);
+      }
+`;
 const Select = ({ selectValue, handleChange }) => {
   const types = [
     {
@@ -24,13 +65,13 @@ const Select = ({ selectValue, handleChange }) => {
     },
   ];
   return (
-    <div>
+    <SelectContainer>
       <select value={selectValue} onChange={handleChange}>
         {types.map((type) => (
           <option key={type.id} value={type.val}>{type.val}</option>
         ))}
       </select>
-    </div>
+    </SelectContainer>
   );
 };
 

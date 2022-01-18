@@ -1,10 +1,47 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { useState, useRef } from 'react';
+import styled from 'styled-components';
 
 import Button from './Button';
 import Select from './Select';
 import { addBookAPI } from '../redux/books/books';
+
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.813rem;
+
+  > div:first-of-type {
+    > h2 {
+      font-size: 1.17rem;
+      color: #888888;
+    }
+  }
+
+  > div:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > input {
+      width: 18rem;
+      height: 2.813rem;
+      border: solid 1px #e8e8e8;
+      padding: 0 20px; 
+
+      &::placeholder {
+        font-size: 0.8rem;
+        font-family: 'Montserrat';
+        color: #c4c4c4;
+      }
+
+      &:focus {
+        outline solid 1px var(--primary-color-1);
+      }
+    }
+  }
+`;
 
 const InputBook = () => {
   const [title, setTitle] = useState('');
@@ -33,7 +70,7 @@ const InputBook = () => {
   };
 
   return (
-    <section>
+    <Container>
       <div>
         <h2>ADD NEW BOOK</h2>
       </div>
@@ -43,7 +80,7 @@ const InputBook = () => {
         <Select handleChange={handleChange} selectValue={category} />
         <Button text="ADD BOOK" handleClick={submitBook} />
       </div>
-    </section>
+    </Container>
   );
 };
 
