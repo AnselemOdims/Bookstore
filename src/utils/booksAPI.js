@@ -36,7 +36,7 @@ class BooksAPI {
    * @memberof BooksAPI
    */
   static async deleteBook(id) {
-    const response = await this.#API.delete(`apps/${this.APP_ID}/books/${id}`);
+    const response = await this.#API.delete(`apps/${this.#APP_ID}/books/${id}`);
     return response;
   }
 }

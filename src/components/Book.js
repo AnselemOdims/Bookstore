@@ -5,17 +5,17 @@ import 'react-circular-progressbar/dist/styles.css';
 import PropTypes from 'prop-types';
 
 import Button from './Button';
-import { removeBook } from '../redux/books/books';
+import { removeBookAPI } from '../redux/books/books';
 
 const Book = ({
   id, category, title, author, chapter,
 }) => {
-  const [percent, setPercent] = useState(10);
+  const [percent, setPercent] = useState(Math.floor(Math.random() * 99));
 
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    dispatch(removeBook({ id }));
+    dispatch(removeBookAPI(id));
   };
 
   const handleClick = () => {
