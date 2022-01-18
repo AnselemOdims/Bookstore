@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
 import Button from './Button';
-import { removeBookAPI } from '../redux/books/books';
+import { removeBookAPI } from '../redux/books/thunks/bookThunks';
 
 const slideIn = keyframes`
 0% {

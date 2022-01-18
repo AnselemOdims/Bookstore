@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import Button from './Button';
 import Select from './Select';
-import { addBookAPI } from '../redux/books/books';
+import { addBookAPI } from '../redux/books/thunks/bookThunks';
 
 const Container = styled.section`
   display: flex;

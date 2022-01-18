@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import styled from 'styled-components';
 
-import { displayBooks } from '../redux/books/books';
+import { displayBooks } from '../redux/books/thunks/bookThunks';
 import Book from './Book';
 import Spinner from './Spinner';
 
