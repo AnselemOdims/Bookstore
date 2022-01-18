@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import { displayBooks } from '../redux/books/books';
 import Book from './Book';
+import Spinner from './Spinner';
 
 const BookList = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const BookList = () => {
     dispatch(displayBooks());
   }, []);
 
-  if (loading) return <h2>Loading...</h2>;
+  if (loading) return <Spinner />;
   if (books.length === 0) return <h2>No books Added yet</h2>;
 
   return (
