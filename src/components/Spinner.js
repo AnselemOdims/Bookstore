@@ -17,8 +17,9 @@ border: 8px solid var(--primary-color-1);
 border-right-color: transparent;
 border-radius: 50%;
 position: absolute;
-top: 10%;
+top: 20%;
 left: 50%;
+z-index: -1;
 `;
 
 const Spinner = () => (

@@ -10,7 +10,7 @@ import { addBookAPI } from '../redux/books/books';
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 1.813rem;
+  margin-top: 5.813rem;
 
   > div:first-of-type {
     > h2 {
@@ -25,7 +25,7 @@ const Container = styled.section`
     justify-content: space-between;
 
     > input {
-      width: 20rem;
+      width: 19rem;
       height: 2.813rem;
       border: solid 1px #e8e8e8;
       padding: 0 20px; 
