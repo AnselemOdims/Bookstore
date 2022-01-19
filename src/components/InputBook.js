@@ -10,7 +10,7 @@ import { addBookAPI } from '../redux/books/thunks/bookThunks';
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 5.813rem;
+  margin-top: 2.9rem;
 
   > div:first-of-type {
     > h2 {
@@ -28,11 +28,13 @@ const Container = styled.section`
       width: 19rem;
       height: 2.813rem;
       border: solid 1px #e8e8e8;
-      padding: 0 20px; 
+      padding: 0 20px;
+      font-size: 1rem; 
+      font-family: var(--font-1);
 
       &::placeholder {
         font-size: 0.8rem;
-        font-family: 'Montserrat';
+        font-family: var(--font-1);
         color: #c4c4c4;
       }
 

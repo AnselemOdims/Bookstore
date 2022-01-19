@@ -31,7 +31,14 @@ const NavContainer = styled(NavBar)`
   > nav {
 
     > .links {
-      color: #121212;
+      opacity: 0.5;
+      font-size: 0.813rem;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.9px;
+      color: var(--black);
 
       &:first-child {
         margin-left: 2.938rem
@@ -64,7 +71,14 @@ const Header = () => {
         </div>
         <nav>
           {links.map((link) => (
-            <NavLink key={link.id} to={link.path} className="links">
+            <NavLink
+              key={link.id}
+              to={link.path}
+              className="links"
+              style={({ isActive }) => ({
+                opacity: isActive ? '1' : '0.5',
+              })}
+            >
               {link.text}
             </NavLink>
           ))}

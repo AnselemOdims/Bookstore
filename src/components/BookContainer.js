@@ -7,9 +7,10 @@ import Book from './Book';
 import Spinner from './Spinner';
 
 const Container = styled.div`
-display: grid;
-grid-template-columns: 1fr;
-gap: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 0;
+  margin-bottom: 2.9rem;
 `;
 
 const BookList = () => {
