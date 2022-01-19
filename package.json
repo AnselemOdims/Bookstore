@@ -27,6 +27,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "overrides": {
+    "mini-css-extract-plugin": "2.4.5"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -57,6 +60,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "mini-css-extract-plugin": "2.4.5",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
