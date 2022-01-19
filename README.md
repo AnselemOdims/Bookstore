@@ -2,10 +2,19 @@
 
 # Bookstore
 
-> Bookstore is an app that allows you to display a list of added books, add new book and remove a book. It is built using React, Redux ...
+> Bookstore is an app that allows you to display a list of added books, add new book and remove a book. It is built using React, Redux, and Styled Components 
+> 
+
+<br/>
+
+# Mini Demo 
+
+![](./src/images/bookstore.gif)
+
+
+<br/>
 
 Additional description about the project and its features.
-
 ## Built With
 
 - Major languages (JavaScript)
@@ -44,7 +53,7 @@ $ cd Bookstore
 
 ```bash
 $ npm install
-$ npm run start # this will open it in the browser and enable hot reloading
+$ npm start # this will open it in the browser and enable hot reloading
 ```
 
   <br>
