@@ -7,7 +7,7 @@ const NavBar = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1.813rem 6.25rem;
-  background: var(--white);
+  background: var(--white); 
 
   > div {
     &:last-child {
@@ -19,13 +19,33 @@ const NavBar = styled.header`
       color: var(--primary-color-1);
     }
   }
+
+  @media (max-width: 992px){
+    padding: 2rem;
+  }
+
+  @media (max-width: 768px){
+    padding: 1rem;
+  }
 `;
 
 const NavContainer = styled(NavBar)`
   padding: 0;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 
   > div {
-    color: #0290ff;
+    color: var(--primary-color-1);
+
+    h2 {
+      font-size: 1.875rem;
+      font-weight: bold;
+      letter-spacing: normal;
+      @media (max-width: 768px){
+        font-size: 1.1rem;
+      }
+    }
   }
 
   > nav {
@@ -34,9 +54,6 @@ const NavContainer = styled(NavBar)`
       opacity: 0.5;
       font-size: 0.813rem;
       font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
       letter-spacing: 1.9px;
       color: var(--black);
 
@@ -45,6 +62,17 @@ const NavContainer = styled(NavBar)`
       }
       &:last-child {
         margin-left: 2.563rem
+      }
+
+      @media (max-width: 768px){
+        font-size: 0.5rem;
+
+        &:first-child {
+        margin-left: 1rem
+        }
+        &:last-child {
+          margin-left: 1rem
+      }
       }
     }
   }

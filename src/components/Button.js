@@ -15,6 +15,11 @@ const StyledButton = styled.button`
   &:focus {
     background: ${(props) => (props.type === 'button' ? 'var(--primary-color-1)' : 'var(--primary-color-2)')};
   }
+
+  @media (max-width: 650px){
+    width: ${(props) => (props.update === 'update' ? '8.063rem' : '11.5rem')};
+    height: ${(props) => (props.update === 'update' ? '2.813rem' : '2.813rem')};
+  }
 `;
 
 const Button = ({ text, handleClick, update }) => (

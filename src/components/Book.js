@@ -22,10 +22,11 @@ const slideIn = keyframes`
 
 const Container = styled.div`
   animation: ${slideIn} 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  display: flex;  
-  justify-content: space-between;
+  display: grid;  
+  grid-template-columns: 38% 20% 5% 37%;
+  gap: 0 10px;
   background: #fff;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: 2rem 0.188rem 1.625rem 1.688rem;
   border: solid 1px #e8e8e8;
   border-radius: 4px;
   font-stretch: normal;
@@ -66,6 +67,9 @@ const Container = styled.div`
         font-weight: 300;
         color: var(--accent-color);
         cursor: pointer;
+        @media (max-width: 650px){
+          margin-top: 5px;
+        }
       }
 
       > span {
@@ -74,7 +78,20 @@ const Container = styled.div`
         margin: 0.75rem 1.063rem 0 0.438rem;
         border: solid 1px var(--neutral-color-1);
         background:  var(--neutral-color-1);
+        @media (max-width: 650px){
+          display: none;
+        }
       }
+      @media (max-width: 650px){
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 650px){
+      grid-row: 1/3;
+      margin-top: 30px;
     }
   }
 
@@ -82,7 +99,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 3.688rem;
     font-family: var(--font-2);
     font-weight: 300;
 
@@ -101,6 +117,10 @@ const Container = styled.div`
     > div {
       margin-top: 1.438rem;
     }
+
+    @media (max-width: 768px){
+      
+    }
   }
 
   > .progress {
@@ -113,6 +133,9 @@ const Container = styled.div`
 
       > p {
         font-size: 2rem;
+        @media (max-width: 450px){
+         font-size: 1rem
+        }
       }
 
       > span {
@@ -128,6 +151,18 @@ const Container = styled.div`
     margin-top: 1.125rem;
     background:  var(--neutral-color-1);
     border: solid 1px var(--neutral-color-1);
+    @media (max-width: 650px){
+    display: none;
+  }
+  }
+
+  @media (max-width: 768px){
+    grid-template-columns: 38% 20% 5% 37%;
+  }
+
+  @media (max-width: 650px){
+    grid-template-columns: 50% 50%;
+    padding: 10px 15px;
   }
 `;
 
@@ -177,6 +212,7 @@ const Book = ({
         <p>CURRENT CHAPTER</p>
         <span>
           Chapter
+          {' '}
           {chapter}
         </span>
         <div>

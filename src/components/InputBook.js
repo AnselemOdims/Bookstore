@@ -16,6 +16,10 @@ const Container = styled.section`
     > h2 {
       font-size: 1.17rem;
       color: #888888;
+      @media (max-width: 768px) {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -25,7 +29,7 @@ const Container = styled.section`
     justify-content: space-between;
 
     > input {
-      width: 19rem;
+      width: 30%;
       height: 2.813rem;
       border: solid 1px #e8e8e8;
       padding: 0 20px;
@@ -39,7 +43,21 @@ const Container = styled.section`
       }
 
       &:focus {
-        outline solid 1px var(--primary-color-1);
+        outline: solid 1px var(--primary-color-1);
+      }
+    }
+
+    @media (max-width: 992px){
+      > input {
+        width: 27%;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      > input {
+        width: 100%;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -76,7 +94,7 @@ const InputBook = () => {
       <div>
         <h2>ADD NEW BOOK</h2>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div>
         <input type="text" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <Select handleChange={handleChange} selectValue={category} />

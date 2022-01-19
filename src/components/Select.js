@@ -18,7 +18,7 @@ const SelectContainer = styled.div`
     } 
 
     & {
-        width: 13.813rem;
+        width: 15%;
         border: solid 1px var(--neutral-color-1);
         border-radius: 4px;
         background-color: var(--white);
@@ -29,6 +29,9 @@ const SelectContainer = styled.div`
         align-items: center;
         margin: 20px 0;
         padding-right: 20px;  
+        @media (max-width: 768px){
+          width: 50%;
+        }
       }
 
       &::after {
