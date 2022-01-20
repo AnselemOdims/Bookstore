@@ -35,11 +35,14 @@ const Container = styled.section`
       padding: 0 20px;
       font-size: 1rem; 
       font-family: var(--font-1);
+      background:${({ theme }) => theme.input};
+      transition: background 0.40s linear;
 
       &::placeholder {
         font-size: 0.8rem;
         font-family: var(--font-1);
-        color: #c4c4c4;
+        color: ${({ theme }) => theme.holder};
+        transition: color 0.40s linear;
       }
 
       &:focus {

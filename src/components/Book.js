@@ -25,15 +25,16 @@ const Container = styled.div`
   display: grid;  
   grid-template-columns: 38% 20% 5% 37%;
   gap: 0 10px;
-  background: #fff;
+  background:${({ theme }) => theme.toggleBook};
   padding: 2rem 0.188rem 1.625rem 1.688rem;
-  border: solid 1px #e8e8e8;
+  border: solid 1px ${({ theme }) => theme.body};
   border-radius: 4px;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   font-weight: bold;
   color: var(--black);
+  transition: background 0.40s linear;
 
   > .first {
     font-family: var(--font-2);
@@ -43,11 +44,15 @@ const Container = styled.div`
       font-size: 0.875rem;
       letter-spacing: normal;
       margin-bottom: 0.25rem;
+      color: ${({ theme }) => theme.text};
+      transition: color 0.40s linear;
     }
 
     > h2 {
       font-size: 1.375rem;
       letter-spacing: -0.2px;
+      color: ${({ theme }) => theme.text};
+      transition: color 0.40s linear;
     }
 
     > span {
@@ -60,13 +65,14 @@ const Container = styled.div`
       margin-top: 1.313rem;
       > button {
         border: none;
-        background: var(--white);
+        background:${({ theme }) => theme.toggleBook};
         margin: 0.188rem 0.938rem 0.125rem 0;
         font-family:var(--font-2);
         font-size: 0.875rem;
         font-weight: 300;
         color: var(--accent-color);
         cursor: pointer;
+        transition: background 0.40s linear;
         @media (max-width: 650px){
           margin-top: 5px;
         }
@@ -101,6 +107,8 @@ const Container = styled.div`
     justify-content: center;
     font-family: var(--font-2);
     font-weight: 300;
+    color: ${({ theme }) => theme.text};
+    transition: color 0.40s linear;
 
     > p {
       margin: 0.063rem 3.625rem 0 0;
@@ -127,6 +135,8 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     font-weight: normal;
+    color: ${({ theme }) => theme.text};
+    transition: color 0.40s linear;
 
     > div:nth-of-type(2) {
       margin-left: 1.313rem;

@@ -1,13 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import { ImUser } from 'react-icons/im';
 import styled from 'styled-components';
+import { bool, func } from 'prop-types';
+import DarkButton from './DarkButton';
 
 const NavBar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.813rem 6.25rem;
-  background: var(--white); 
+  background: ${({ theme }) => theme.toggleBook}; 
+  transition: background 0.40s linear;
 
   > div {
     &:last-child {
@@ -17,6 +20,9 @@ const NavBar = styled.header`
       width: 2.813rem;
       height: 2.813rem;
       color: var(--primary-color-1);
+      @media (max-width: 768px){
+        display: none
+      }
     }
   }
 
@@ -36,7 +42,8 @@ const NavContainer = styled(NavBar)`
   line-height: normal;
 
   > div {
-    color: var(--primary-color-1);
+    color: ${({ theme }) => theme.primary};
+    transition: color 0.40s linear;
 
     h2 {
       font-size: 1.875rem;
@@ -55,7 +62,8 @@ const NavContainer = styled(NavBar)`
       font-size: 0.813rem;
       font-weight: normal;
       letter-spacing: 1.9px;
-      color: var(--black);
+      color: ${({ theme }) => theme.text};
+      transition: color 0.40s linear;
 
       &:first-child {
         margin-left: 2.938rem
@@ -78,7 +86,7 @@ const NavContainer = styled(NavBar)`
   }
 `;
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
   const links = [
     {
       id: 1,
@@ -113,10 +121,18 @@ const Header = () => {
         </nav>
       </NavContainer>
       <div>
+        <DarkButton theme={theme} toggleTheme={toggleTheme} />
+      </div>
+      <div className="avatar">
         <ImUser />
       </div>
     </NavBar>
   );
+};
+
+Header.propTypes = {
+  theme: bool.isRequired,
+  toggleTheme: func.isRequired,
 };
 
 export default Header;
