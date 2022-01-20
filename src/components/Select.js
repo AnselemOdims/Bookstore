@@ -12,23 +12,25 @@ const SelectContainer = styled.div`
       height: 2.813rem;
       font-family: inherit;
       outline: none;
-      color: #c4c4c4;
+      color: ${({ theme }) => theme.holder};
       cursor: pointer;
       padding: 0 0 0 20px;
+      transition: color 0.40s linear;
     } 
 
     & {
         width: 15%;
         border: solid 1px var(--neutral-color-1);
         border-radius: 4px;
-        background-color: var(--white);
+        background:${({ theme }) => theme.input};
         height: 2.813rem;
         cursor: pointer;
         line-height: 1.1;
         display: flex;
         align-items: center;
         margin: 20px 0;
-        padding-right: 20px;  
+        padding-right: 20px; 
+        transition: background 0.40s linear; 
         @media (max-width: 768px){
           width: 50%;
         }

@@ -7,10 +7,11 @@ const StyledButton = styled.button`
   padding: ${(props) => (props.update === 'update' ? '0.438rem 1.188rem 0.5rem 1.375rem' : '0.801rem 1.188rem 0.886rem 1.375rem')};
   border-radius: 3px;
   font-family: var(--font-2);
-  background: var(--primary-color-1);
+  background: ${({ theme }) => theme.primary};
   border: none;
   color: var(--white);
   cursor: pointer;
+  transition: background 0.40s linear;
 
   &:focus {
     background: ${(props) => (props.type === 'button' ? 'var(--primary-color-1)' : 'var(--primary-color-2)')};
